@@ -1,0 +1,29 @@
+1) Introduction
+1. Import Libraries
+2. Load data
+3. Run Statistical summeries
+4. Figure out missing value columns
+
+2) Visualizations
+1. Correlation with target variable
+
+3) Missing values imputation
+1. train data Missing columns- Embarked,Age,Cabin
+2. test data Missing columns- Age and Fare
+
+4) Feature Engineering
+1. Calculate total family size
+2. Get title from name
+3. Find out which deck passenger belonged to
+4. Dealing with Categorical Variables
+5. Label encoding
+6. Feature Scaling
+
+5) Prediction
+1. Split into training & test sets
+2. Build the model
+3. Feature importance
+4. Predictions
+5. Ensemble : Majority voting
+
+6) Submission

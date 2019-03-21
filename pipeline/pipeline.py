@@ -1,9 +1,10 @@
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 import seaborn as sns
-
 from visualization import Visualization
+from imputation import MissingVlaueImputation
+import matplotlib.pyplot as plt
+
+sns.set(font_scale=1)
 
 titanic = pd.read_csv('train.csv')
 
@@ -21,5 +22,14 @@ titanic = pd.read_csv('train.csv')
 # titanic.isnull().sum()  # sum the numbers of null
 #
 
+
+# visualization
 visualization = Visualization(titanic)
-visualization.missingvalues()
+visualization.drawDistributionOfColumn("Age")
+plt.show()
+
+
+# Missing value imputation
+# imputation = MissingVlaueImputation(titanic)
+# imputation.findAverage()
+
