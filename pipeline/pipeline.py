@@ -1,7 +1,7 @@
 import pandas as pd
 import seaborn as sns
-from visualization import Visualization
-from imputation import MissingVlaueImputation
+from .visualization import Visualization
+from .imputation import MissingVlaueImputation
 import matplotlib.pyplot as plt
 
 sns.set(font_scale=1)

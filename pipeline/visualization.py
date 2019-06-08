@@ -97,6 +97,13 @@ class Visualization():
         print(self.data.corr()['Survived'])
         plot.title('Correlation between features')
 
+    def drawCovarianceMatrix2(self):
+        colormap = plot.cm.RdBu
+        plot.figure(figsize=(14, 12))
+        plot.title('Pearson Correlation of Features', y=1.05, size=15)
+        sns.heatmap(self.data.astype(float).corr(), linewidths=0.1, vmax=1.0,
+                    square=True, cmap=colormap, linecolor='white', annot=True)
+
 
     def drawViolin(self):
         g = sns.factorplot(x="Age", y="Embarked",
@@ -114,3 +121,10 @@ class Visualization():
                          kde=True,
                          color="red")
             plot.ylabel("Count")
+
+    # 绘制不同的二阶特征下Survive的分布
+    def pairplots(self):
+        g = sns.pairplot(self.data[[u'Survived', u'Pclass', u'Sex', u'Age', u'Parch', u'Fare', u'Embarked',
+                                u'FamilySize', u'Title']], hue='Survived', palette='seismic', size=1.2, diag_kind='kde',
+                         diag_kws=dict(shade=True), plot_kws=dict(s=10))
+        g.set(xticklabels=[])
