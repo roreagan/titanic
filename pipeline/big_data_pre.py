@@ -80,3 +80,5 @@ times.value_counts()  # 统计各个日期出现次数
 # 2019-03-05         145
 
 # 筛选特定时间段的，左右都包含
+data = data.loc[(data['operTime'] >= pd.to_datetime('2019-03-26')) & (data['operTime'] <= pd.to_datetime('2019-04-01'))]
+
